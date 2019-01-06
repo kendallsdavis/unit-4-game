@@ -49,7 +49,54 @@ var Crystal1 = vals[Math.floor(Math.random()*vals.length)];
 targetnum = targetnumlist[Math.floor(Math.random()*targetnumlist.length)];
 console.log(targetnum);
 
-document.getElementById("randnum").innerHTML = "Your Number Is";
+// Display the value of "targetnum" as the number to match to win the game
+$("#number").text("The Number To Match: " + targetnum);
+
+// Assign values to each crystal button equal to the randomly selected crystal value
+// $("crystal1").attr(Crystal1);
+// $("crystal2").attr(Crystal2);
+// $("crystal3").attr(Crystal3);
+// $("crystal4").attr(Crystal4);
+
+// Set up actions for when crystal buttons are clicked
+// Add new value to score
+// Check to se if game won or lost
+$("#crystal1").click(function(){
+score = score + Crystal1;
+console.log(score);
+$("#currscore").text(score);
+}
+)
+
+$("#crystal2").click(function(){
+    score = score + Crystal2;
+    console.log(score);
+    $("#currscore").text(score);
+}
+)
+
+$("#crystal3").click(function(){
+    score = score + Crystal3;
+    console.log(score);
+    $("#currscore").text(score);
+}
+)
+
+$("#crystal4").click(function(){
+    score = score + Crystal4;
+    console.log(score);
+    $("#currscore").text(score);
+}
+)
+
+// if (score = targetnum) {
+//     console.log("you win")
+// } else if (score > targetnum) {
+//     console.log("you lose")
+// } else {
+//     console.log("nothing")
+// }
+
 
 // CLOSE DOCUMENT READY FUNCTION
 });
