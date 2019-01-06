@@ -1,4 +1,4 @@
-#title, #blank1, #blank2, #number, #WL, #crystal1, #crystal2, #crystal3, #crystal4, #scoretext, #scorenum {
+#title, #blank1, #blank2, #number, #wins, #losses, #crystal1, #crystal2, #crystal3, #crystal4, #scoretext, #scorenum {
     border-style: solid;
     border-color: red;
     border-width: 2px;
@@ -26,4 +26,9 @@ body {
 
 #crystal1, #crystal2, #crystal3, #crystal4 {
     background-color: white;
+}
+
+#number {
+height: 50px;
+width: 50px;
 }

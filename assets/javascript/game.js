@@ -30,10 +30,9 @@ var targetnum = [];
         for (var i = low; i <= high; i++) {
             targetnumlist.push(i);
         }
-            console.log(targetnumlist);
 
 // Set Crystal Values
-var Crystal1 = vals[Math.floor(Math.random()*vals.length)];
+    var Crystal1 = vals[Math.floor(Math.random()*vals.length)];
     console.log(Crystal1);
 
     var Crystal2 = vals[Math.floor(Math.random()*vals.length)];
@@ -45,26 +44,61 @@ var Crystal1 = vals[Math.floor(Math.random()*vals.length)];
     var Crystal4 = vals[Math.floor(Math.random()*vals.length)];
     console.log(Crystal4);
 
+// Build reset function
+var Reset = function() {
+    score = 0;
+    $("#currscore").text(score);
+    targetnum =  targetnum = targetnumlist[Math.floor(Math.random()*targetnumlist.length)];
+    $("#number").text("The Number To Match: " + targetnum);
+    Crystal1 = vals[Math.floor(Math.random()*vals.length)];
+    console.log(Crystal1);
+    Crystal2 = vals[Math.floor(Math.random()*vals.length)];
+    console.log(Crystal2);
+    Crystal3 = vals[Math.floor(Math.random()*vals.length)];
+    console.log(Crystal3);
+    Crystal4 = vals[Math.floor(Math.random()*vals.length)];
+    console.log(Crystal4);
+}
+
+// Build Win Function
+var Winfun = function(){
+console.log("you win");
+wins = wins + 1;
+$("#wins").text("Wins: " + wins);
+Reset();
+}
+
+// Build Lose Function
+ var Lossfun = function(){
+ console.log("you lose :(")
+    score = 0;
+    losses = losses + 1;
+    console.log(losses);
+    $("#losses").text("Losses: " + losses);
+    Reset();
+ }
+
 // Select a target number for this round
 targetnum = targetnumlist[Math.floor(Math.random()*targetnumlist.length)];
-console.log(targetnum);
 
 // Display the value of "targetnum" as the number to match to win the game
 $("#number").text("The Number To Match: " + targetnum);
 
-// Assign values to each crystal button equal to the randomly selected crystal value
-// $("crystal1").attr(Crystal1);
-// $("crystal2").attr(Crystal2);
-// $("crystal3").attr(Crystal3);
-// $("crystal4").attr(Crystal4);
-
 // Set up actions for when crystal buttons are clicked
 // Add new value to score
 // Check to se if game won or lost
+
 $("#crystal1").click(function(){
 score = score + Crystal1;
 console.log(score);
 $("#currscore").text(score);
+if (score == targetnum) {
+    Winfun();
+} else if (score < targetnum) {
+    console.log("keep guessing")
+} else if (score > targetnum) {
+    Lossfun();
+}
 }
 )
 
@@ -72,6 +106,13 @@ $("#crystal2").click(function(){
     score = score + Crystal2;
     console.log(score);
     $("#currscore").text(score);
+    if (score == targetnum) {
+        Winfun();
+    } else if (score < targetnum) {
+        console.log("keep guessing")
+    } else if (score > targetnum) {
+        Lossfun();
+    }
 }
 )
 
@@ -79,6 +120,13 @@ $("#crystal3").click(function(){
     score = score + Crystal3;
     console.log(score);
     $("#currscore").text(score);
+    if (score == targetnum) {
+        Winfun();
+    } else if (score < targetnum) {
+        console.log("keep guessing")
+    } else if (score > targetnum) {
+        Lossfun();
+    }
 }
 )
 
@@ -86,16 +134,17 @@ $("#crystal4").click(function(){
     score = score + Crystal4;
     console.log(score);
     $("#currscore").text(score);
+    if (score == targetnum) {
+        Winfun();
+    } else if (score < targetnum) {
+        console.log("keep guessing")
+    } else if (score > targetnum) {
+        Lossfun();
+    }
 }
 )
 
-// if (score = targetnum) {
-//     console.log("you win")
-// } else if (score > targetnum) {
-//     console.log("you lose")
-// } else {
-//     console.log("nothing")
-// }
+
 
 
 // CLOSE DOCUMENT READY FUNCTION
