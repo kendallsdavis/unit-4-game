@@ -1,0 +1,6 @@
+#title, #blank1, #blank2, #number, #WL, #crystal1, #crystal2, #crystal3, #crystal4, #scoretext, #scorenum {
+    border-style: solid;
+    border-color: red;
+    border-width: 2px;
+    text-align: center;
+}
