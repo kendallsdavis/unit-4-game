@@ -4,3 +4,27 @@
     border-width: 2px;
     text-align: center;
 }
+
+#crystal1, #crystal2, #crystal3, #crystal4 {
+    height: 150px;
+}
+
+/* #crystal1 {
+    height: 50px;
+    background-image: url("../images/crystal1.jpg" width = 40px, height = 40px) ;
+}
+
+#crystal2 {
+    height: 50px;
+    background-image: url("../images/crystal2.jpg");
+}
+
+#crystal3 {
+    height: 50px;
+    background-image: url("../images/crystal3.jpg");
+}
+
+#crystal4 {
+    height: 50px;
+    background-image: url("../images/crystal4.jpg");
+} */
