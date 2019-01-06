@@ -5,26 +5,25 @@
     text-align: center;
 }
 
+#header {
+    color: rgba(red, green, blue, alpha);
+    font-size: 20px;
+}
+
+#instructions {
+    color: darkblue;
+    font-weight: bold;
+}
+
+body {
+    background-image: url(../images/background.jpg);
+    background-size: 100%;
+}
+
 #crystal1, #crystal2, #crystal3, #crystal4 {
     height: 150px;
 }
 
-/* #crystal1 {
-    height: 50px;
-    background-image: url("../images/crystal1.jpg" width = 40px, height = 40px) ;
+#crystal1, #crystal2, #crystal3, #crystal4 {
+    background-color: white;
 }
-
-#crystal2 {
-    height: 50px;
-    background-image: url("../images/crystal2.jpg");
-}
-
-#crystal3 {
-    height: 50px;
-    background-image: url("../images/crystal3.jpg");
-}
-
-#crystal4 {
-    height: 50px;
-    background-image: url("../images/crystal4.jpg");
-} */
